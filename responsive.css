@@ -1,0 +1,187 @@
+/* ===============================
+   GLOBAL BASE (SAFE)
+   =============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF8F3;
+    color: #333;
+    line-height: 1.6;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===============================
+   NAVIGATION (SCOPED)
+   =============================== */
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+header nav h2 {
+    color: #C9A14A;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* ===============================
+   PAGE CONTAINERS (NON-CONFLICT)
+   =============================== */
+
+.page-section {
+    padding: 50px 40px;
+}
+
+.page-section h2,
+.page-section h3 {
+    margin-bottom: 20px;
+}
+
+.page-section p {
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   IMAGE LAYOUTS (ONLY WHEN USED)
+   =============================== */
+
+.image-grid,
+.featured-products {
+    display: grid;
+    gap: 20px;
+}
+
+.image-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.featured-products {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===============================
+   SERVICES GROUPING
+   =============================== */
+
+.service-group {
+    margin-bottom: 40px;
+}
+
+.service-group h3 {
+    color: #C9A14A;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   BLOG PAGE (SCOPED)
+   =============================== */
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* ===============================
+   CONTACT PAGE (SCOPED)
+   =============================== */
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #C9A14A;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
+/* ===============================
+   RESPONSIVE RULES (SOFT & SAFE)
+   =============================== */
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-grid,
+    .featured-products,
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+/* 📱 Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .image-grid,
+    .featured-products,
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
