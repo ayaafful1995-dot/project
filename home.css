@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color:  #0f172a;
+}
+
+/* Navbar */
+header {
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 1rem;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+}
+
+.light {
+    background: #f4f4f4;
+    max-width: 100%;
+}
+
+/* Home */
+.home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #00bcd4, #2196f3);
+    color: white;
+}
+
+.home button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.home button:hover {
+    background: #333;
+}
+
+/* Services */
+.services {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
